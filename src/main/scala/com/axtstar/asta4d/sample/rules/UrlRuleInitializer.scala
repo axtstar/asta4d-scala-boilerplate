@@ -1,9 +1,11 @@
 package com.axtstar.asta4d.sample.rules
 
+import java.awt.image.SampleModel
+
 import com.astamuse.asta4d.scala.handyrule.SHandyRuleSet
 import com.astamuse.asta4d.web.dispatch.HttpMethod
-import com.astamuse.asta4d.web.dispatch.mapping.handy.HandyRuleSet
-import com.astamuse.asta4d.web.dispatch.mapping.{UrlMappingRuleRewriter, UrlMappingRule, UrlMappingRuleInitializer}
+import com.astamuse.asta4d.web.dispatch.mapping.{UrlMappingRuleInitializer}
+import com.axtstar.asta4d.sample.handler.SampleHandler
 import org.slf4j.LoggerFactory
 import com.astamuse.asta4d.web.dispatch.HttpMethod._
 
@@ -17,7 +19,14 @@ class UrlRuleInitializer extends UrlMappingRuleInitializer[SHandyRuleSet] {
   private lazy val nullHttpMethod: HttpMethod = null
 
   override def initUrlMappingRules(rules: SHandyRuleSet) = {
-    rules.add("/", "/index.html")
-    rules.add(POST, "/index2.html","/index2.html")
+    rules.add(GET, "/", "/index.html")
+
+    rules.add(GET, "/index.html", "/index.html")
+
+    rules.add(POST,"/index.html")
+      .handler(new SampleHandler)
+      .redirect("/index.html")
+
+    rules.add(GET, "/index2.html", "/index2.html")
   }
 }
