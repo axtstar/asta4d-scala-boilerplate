@@ -13,7 +13,6 @@ class SampleSnippet {
   def setInpteText(): Renderer = {
     val context = com.astamuse.asta4d.web.WebApplicationContext.getCurrentThreadWebApplicationContext
     // setDate to named "test1"
-    val test1 = Option(context.getData[String]("test1"))
-    ".x-input-text" ->  "value" -> test1.getOrElse("")
+    ".x-input-text" ->  "value" -> "AA"
   }
 }
