@@ -1,5 +1,5 @@
 name := "asta4dSample"
-version := "0.0.1"
+version := "0.0.2"
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
@@ -12,4 +12,8 @@ libraryDependencies ++= Seq(
 
 enablePlugins(JettyPlugin)
 
-containerPort := 8082
+containerPort := 8080
+
+lazy val hello = taskKey[Unit]("Prints 'Hello World'")
+hello := println("hello world!")
+
