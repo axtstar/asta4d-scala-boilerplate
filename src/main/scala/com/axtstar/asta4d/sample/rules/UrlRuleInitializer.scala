@@ -23,9 +23,11 @@ class UrlRuleInitializer extends UrlMappingRuleInitializer[SHandyRuleSet] {
 
     rules.add(GET, "/", "/index.html")
 
-    rules.add(GET, "/index.html", "/index.html")
+    rules.add(GET, "/index.html")
+      .handler(new SampleHandler)
+      .forward("/index.html")
 
-    rules.add(POST,"/", "/index.html")
+    rules.add(POST,"/","/index.html")
 
     rules.add(POST,"/index.html")
       .handler(new SampleHandler)
