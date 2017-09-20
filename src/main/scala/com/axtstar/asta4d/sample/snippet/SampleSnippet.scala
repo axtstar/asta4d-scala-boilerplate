@@ -12,10 +12,10 @@ class SampleSnippet {
   private val logger = LoggerFactory.getLogger(classOf[SampleSnippet])
 
   @Input (name="name")
-  var name:String = _
+  var name:String = ""
 
   @Input (name="age")
-  var age:String = _
+  var age:String = ""
 
   def setRenderer(): Renderer = {
     // setDate to named "test1"
