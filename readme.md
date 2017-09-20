@@ -18,7 +18,7 @@ See here ![asta4d](https://github.com/astamuse/asta4d)
 
 ## How to run
 
-> sbt ~jetty:run
+> sbt ~jetty:start
 
 ## How to pack
 
