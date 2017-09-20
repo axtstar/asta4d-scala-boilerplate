@@ -13,7 +13,3 @@ libraryDependencies ++= Seq(
 enablePlugins(JettyPlugin)
 
 containerPort := 8080
-
-lazy val hello = taskKey[Unit]("Prints 'Hello World'")
-hello := println("hello world!")
-
