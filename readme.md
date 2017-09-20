@@ -8,17 +8,13 @@ This is a sample app.
 
 > git clone -depth 1 https://github.com/axtstar/asta4d-scala-boilerplate.git <your-project-name>
 
-# How to run
+## How to run
 
-> sbt ~jetty:run
+> sbt ~jetty:start
 
 access to web browser at "http://127.0.0.1/8080".
 
 See here ![asta4d](https://github.com/astamuse/asta4d)
-
-## How to run
-
-> sbt ~jetty:start
 
 ## How to pack
 
