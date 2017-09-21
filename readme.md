@@ -12,9 +12,9 @@ This is a sample app.
 
 > sbt ~jetty:start
 
-access to web browser at "http://127.0.0.1/8080".
+access to web browser at [http://127.0.0.1/8080](http://127.0.0.1/8080) .
 
-See here ![asta4d](https://github.com/astamuse/asta4d)
+See here [asta4d](https://github.com/astamuse/asta4d)
 
 ## How to pack
 
