@@ -1,26 +1,20 @@
 <html>
 <head><meta charset="utf-8" /></head>
 <body>
-<afd:snippet render="TestFormSnippet">
-    <ul>
+    <adf:snippet render="TestFormSnippet">
+    <form>
+    <ul class="x-list">
         <li>
             <span>名前</span>
             <div>
-                <p><strong id="name-err-msg"></strong></p>
-                <input type="text" placeholder="名前" name="name">
-            </div>
-        </li>
-        <li>
-            <span>メールアドレス</span>
-            <div>
-                <p><strong id="mail-err-msg"></strong></p>
-                <input type="text" placeholder="test@astamuse.com" name="email">
-            </div>
-                <input type="checkbox" name="check" id="check"><label for="check">Mon</label></input>
+                <span>メールアドレス</span>
+                <span class="x-name"></span>
+                <input type="checkbox" name="check" id="check" class="x-check"><label for="check" class="x-label">Mon</label></input>
             </div>
 
         </li>
     </ul>
-</afd:snippet>
+    </form>
+    </adf:snippet>
 </body>
 </html>
