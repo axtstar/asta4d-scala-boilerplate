@@ -10,6 +10,13 @@ import com.axtstar.asta4d.sample.form.SampleForm
 class SampleFormFlowHandler extends ClassicalMultiStepFormFlowHandlerTrait[SampleForm] {
   override def getFormCls = {classOf[SampleForm]}
 
+  override def createInitForm={
+    val target = new SampleForm
+    target.setName("test")
+    target.setAge("30")
+    target
+  }
+
   override def updateForm(form: SampleForm): Unit = {
 
   }
@@ -18,6 +25,8 @@ class SampleFormFlowHandler extends ClassicalMultiStepFormFlowHandlerTrait[Sampl
     "/form-flow/form-"
   }
 
-
+  override def treatCompleteStepAsExit(): Boolean = {
+    false
+  }
 
 }

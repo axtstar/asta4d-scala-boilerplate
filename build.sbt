@@ -1,6 +1,6 @@
 name := "asta4dSample"
 version := "0.0.2"
-scalaVersion := "2.12.2"
+scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   "com.astamuse" % "asta4d-core" % "1.2-M2",

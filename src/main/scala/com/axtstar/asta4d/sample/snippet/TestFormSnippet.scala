@@ -11,6 +11,7 @@ import com.astamuse.asta4d.web.form.flow.classical.ClassicalMultiStepFormFlowSni
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ArrayBuffer
 import com.astamuse.asta4d.scala.R._
+import com.astamuse.asta4d.web.form.annotation.Form
 import com.axtstar.asta4d.sample.form.SampleForm
 
 /**
@@ -19,13 +20,8 @@ import com.axtstar.asta4d.sample.form.SampleForm
 class TestFormSnippet extends ClassicalMultiStepFormFlowSnippetTrait {
 
   override def render(renderingData: FormRenderingData): Renderer = {
-    ".x-list" -> List("1", "2", "3", "4", "5").map {
-      x =>
-        ".x-name" -> x &
-          ".x-check" -> "name" -> ("check" + x) &
-          ".x-check" -> "id" -> ("check" + x) &
-          ".x-label" -> "for" -> ("check" + x) &
-          ".x-label" -> ("LABEL" + x)
-    }
+    ".x-step" -> "test"
   }
+
+
 }

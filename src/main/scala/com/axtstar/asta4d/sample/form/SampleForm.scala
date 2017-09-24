@@ -13,50 +13,22 @@ import scala.collection.JavaConversions._
 @Form
 class SampleForm {
 
-  var check1:String = ""
-  var check2:String = ""
-  var check3:String = ""
-  var check4:String = ""
-  var check5:String = ""
+  var name:String = ""
+  var age:String = ""
 
-  @Input(name="check1")
-  def getCheck1()={
-    check1
+  @Input(name="name")
+  def getName()={
+    name
   }
-  def setCheck1(args:String)={
-    check1 = args
+  def setName(args:String)={
+    name = args
   }
 
-  @Input(name="check2")
-  def getCheck2()={
-    check2
+  @Input(name="age")
+  def getAge()={
+    age
   }
-  def setCheck2(args:String)={
-    check2 = args
+  def setAge(args:String)={
+    age = args
   }
-
-  @Input(name="check3")
-  def getCheck3()={
-    check3
-  }
-  def setCheck3(args:String)={
-    check3 = args
-  }
-
-  @Input(name="check4")
-  def getCheck4()={
-    check4
-  }
-  def setCheck4(args:String)={
-    check4 = args
-  }
-
-  @Input(name="check5")
-  def getCheck5()={
-    check5
-  }
-  def setCheck5(args:String)={
-    check5 = args
-  }
-
 }
