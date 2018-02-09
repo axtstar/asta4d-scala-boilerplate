@@ -17,11 +17,17 @@ class SampleSnippet {
   @Input (name="age")
   var age:String = ""
 
-  def setRenderer(): Renderer = {
+  def setRenderer() = {
     // setDate to named "test1"
-    ".x-name-input" ->  "value" -> name &
-    ".x-age-input" -> "value" -> age &
+    ".x-name-input" ->  "value" -> ("name:" + name) &
+    ".x-age-input" -> "value" -> ("age:" + age) &
     ".x-name" ->  name &
-    ".x-age" -> age
+    ".x-age" -> age &
+    ".x-list" -> List(1,2,3).map {
+      x => {
+        ".x-child" -> x.toString
+      }
+    }
+
   }
 }

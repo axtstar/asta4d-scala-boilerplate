@@ -1,6 +1,7 @@
 package com.axtstar.asta4d.sample.handler
 
 import com.astamuse.asta4d.web.dispatch.request.RequestHandler
+import com.astamuse.asta4d.web.form.flow.base.FormFlowTraceData
 import com.astamuse.asta4d.web.form.flow.classical.ClassicalMultiStepFormFlowHandlerTrait
 import com.axtstar.asta4d.sample.form.SampleForm
 
@@ -17,16 +18,27 @@ class SampleFormFlowHandler extends ClassicalMultiStepFormFlowHandlerTrait[Sampl
     target
   }
 
+  override def passDataToSnippetByFlash(currentStep: String, renderTargetStep: String, traceData: FormFlowTraceData): Boolean = {
+    super.passDataToSnippetByFlash(currentStep, renderTargetStep, traceData)
+  }
+
   override def updateForm(form: SampleForm): Unit = {
 
   }
 
   override def getTemplateBasePath: String = {
-    "/form-flow/form-"
+    "/form-flow/"
   }
 
   override def treatCompleteStepAsExit(): Boolean = {
-    false
+    true
+  }
+
+  override def createMoveTargetForStep(step: String): String = {
+    step match {
+      case _ =>
+        getTemplateBasePath + step + ".html"
+    }
   }
 
 }
